@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex; /* Aligns the image and text horizontally */
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, #4a90e2, #50c9c3);
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: left;
+        }
+
+        /* Profile picture styling */
+        header .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* Makes the image circular */
+            border: 3px solid #fff; /* Border around the image */
+            margin-right: 20px; /* Space between the image and text */
+        }
+
+        /* Container for the greeting text */
+        header .greeting-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Tagline styling */
+        header .tagline {
+            font-style: italic;
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        /* Navigation Menu Styling */
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        /* Hover effect for links */
+        header nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        /* Section styling */
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 900px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Section headings */
+        section h2 {
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            color: #4a90e2;
+            border-bottom: 2px solid #4a90e2;
+            display: inline-block;
+        }
+
+        /* Project styling */
+        .project {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fafafa;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover effect for projects */
+        .project:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-img {
+            width: 120px;
+            height: 80px;
+            margin-right: 20px;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .project a {
+            margin-left: auto;
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .project a:hover {
+            color: #50c9c3;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #4a90e2;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Back to Top Button */
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background: #4a90e2;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hover effect for Back to Top button */
+        #back-to-top:hover {
+            background: #50c9c3;
+        }
+
+        /* Mobile responsive styling */
+        @media (max-width: 600px) {
+            header nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            /* Project layout for small screens */
+            .project {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .project a {
+                margin: 10px 0 0;
+            }
+
+            /* Header adjustment for small screens */
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            header .greeting-container {
+                align-items: center;
+                text-align: center;
+            }
+
+            /* Adjust profile picture spacing */
+            header .profile-pic {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with profile picture, greeting, and navigation -->
+    <header>
+        <img src="Graduation_Picture.jpg" alt="Your Logo or Photo" class="profile-pic">
+        <div class="greeting-container">
+            <h1 id="greeting">Welcome to My Portfolio</h1>
+            <p class="tagline">"Crafting Digital Solutions with Creativity and Precision"</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Welcome!</h2>
+        <p>Hey there! I'm Kent Alfred T. Tangonan, a web wizard and creative problem-solver on a mission to build amazing digital experiences. Whether it’s coding up a storm or finding innovative solutions, I’m all about bringing ideas to life. Dive into my journey, explore my skills, and check out the cool projects I’ve crafted along the way!</p>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            <strong>Skills:</strong> HTML, CSS, JavaScript, React, Python<br>
+            <strong>Experience:</strong> 3+ years in web development, specializing in front-end design and UX<br>
+            <strong>Education:</strong> Bachelor of Science in Computer Science<br>
+            <strong>Interests:</strong> Coding, design, photography, and gaming
+        </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <!-- Portfolio Website Project -->
+        <div class="project">
+            <h3>Project 1: Portfolio Website</h3>
+            <p>Built a personal portfolio showcasing skills and projects.</p>
+            <a href="https://example.com/project2" target="_blank">View Project</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 [Kent Alfred T. Tangonan]. All Rights Reserved. | <a href="mailto:yourname@example.com">Contact Me</a></p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top">Top</button>
+
+    <script>
+        // Dynamic Greeting based on time of day
+        const greetingElement = document.getElementById('greeting');
+        const hours = new Date().getHours();
+        const timeGreeting = hours < 12 ? 'Good Morning!' : hours < 18 ? 'Good Afternoon!' : 'Good Evening!';
+        greetingElement.innerText = `${timeGreeting} Welcome to My Portfolio`;
+
+        // Smooth Scroll for navigation
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Back to Top Button visibility and functionality
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
